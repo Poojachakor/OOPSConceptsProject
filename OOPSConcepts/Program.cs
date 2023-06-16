@@ -4,23 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Car myCar = new Car();
+            // Create an array of shapes
+            Shape[] shapes = new Shape[3];
+            shapes[0] = new Circle();
+            shapes[1] = new Rectangle();
+            shapes[2] = new Triangle();
 
-            
-            myCar.Model = "Thar";
-            myCar.Color = "Black";
-            myCar.Year = 2025;
-
-            
-            Console.WriteLine("Car Details:");
-            Console.WriteLine("Model: " + myCar.Model);
-            Console.WriteLine("Color: " + myCar.Color);
-            Console.WriteLine("Year: " + myCar.Year);
-
-            myCar.Start();
-            myCar.Stop();
-
-            Console.ReadLine();
+            // Draw each shape
+            foreach (Shape shape in shapes)
+            {
+                shape.Draw();
+            }
         }
     }
     
